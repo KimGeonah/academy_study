@@ -108,7 +108,6 @@
         } */
 
 
-
 /*         //------------------------ 예제 (3)
         //주민번호 8자리 입력받아 성별 출력
 
@@ -131,7 +130,6 @@
         }
 
         document.write('당신의 성별은 ' + gender + '입니다.'); */
-
 
         
 /*         //------------------------ 예제 (4)
@@ -169,93 +167,80 @@
         document.write('학   점 : ' + score + '<br />'); */
 
 
-
 /*         //------------------------ 과제 (1)
-        //회원탈퇴시 나타나는 알림창에서 확인을 선택했을 경우 '정상적으로 탈퇴되었습니다.'
-        //취소를 선택했을경우 '다음에 다시 방문해 주세요'라는 알림메세지 출력하기
-        //if -> confirm변수(확인,취소, tf)를 input으로 잡은거다? -> if else문 
+        //회원탈퇴 알림창에서 확인'정상적으로 탈퇴되었습니다.'취소'다음에 다시 방문해 주세요'라는 알림메세지 출력하기
 
+        let input = confirm('회원탈퇴를 진행하시겠습니까?');
+        let str ='';
 
-        let userCheck = confirm('탈퇴 하시겠습니까?');
-
-        if(userCheck = 1){
-            alert('정상적으로 탈퇴되었습니다');
-        }else(
-            alert('다음에 다시 방문해 주세요')
-        ) */
-
+        if(input == true){
+            str = '정상적으로 탈퇴 되었습니다.'
+        }else{
+            str = '다음에 다시 방문해 주세요.'
+        }
+        alert(str); */
 
 
 /*         //------------------------ 과제 (2)
-        //현재 월과 계절 출력하기. 3,4,5월 이라면 하고 입력하면 if else에 3,4,5월이라면 봄, 6,7,8이라면 여름 이런식으로 ,,or도 ||(논리)같이 써야함
+        //현재 월과 계절 출력하기. 
         //month라는 변수로 현재 계절 입력하기 
-
 
 
         let month = parseInt(prompt('현재 월을 입력하세요'));
         let seoson = '';
 
-        if(month === 3 || month === 4 || month === 5){
-            seoson = '봄';
-        }else if(month === 6 || month === 7 || month === 8){
-            seoson = '여름';
-        }else if(month === 9 || month === 10 || month === 11){
-            seoson = '가을';
-        }else if(month === 12 || month === 1 || month === 2){
-            seoson = '겨울';
+        if(month == 3 || month == 4 || month == 5){
+            seoson = '현재 계절은 봄입니다';
+        }else if(month == 6 || month == 7 || month == 8){
+            seoson = '현재 계절은 여름입니다';
+        }else if(month == 9 || month == 10 || month == 11){
+            seoson = '현재 계절은 가을입니다';
+        }else if(month == 12 || month == 1 || month == 2){
+            seoson = '현재 계절은 겨울입니다';
         }else{
-            alert('잘못된 월을 입력하셨습니다');
+            seoson = '잘못된 값을 입력하셨습니다. ';
         }
 
-        document.write('현재 월은 ' + month + '월 입니다.' + '<br />')
-        document.write('계절은 ' + seoson + '입니다.')*/
-
+        document.write('입력하신 값은 ' + month + '월 입니다.' + '<br />')
+        document.write(seoson)*/
 
 
 /*         //------------------------ 과제 (3)
-        //쇼핑몰에서 구입가격에 따라 할인율을 달리하여 결제하는 이벤트 진행
-        //할인율을 이용하여 구입가와 할인가 출력하기 
-
+        //구입가격에 따라 할인율 기준 다름 (구입가, 할인가 출력하기)
         //10,000이상 10%
         //5,000이상 5%
         //3,000이상 3%
         //1,000이상 1%
 
-        //구입가 출력, (누적말고 숫자로 찍어라) -> 15000 이러케 찍기
-        //10퍼센트 적용하면 할인가 얼마인지쓰기 ("단위는 계산식에 못넣으니 0.1이라고적기")
-    
-
-        let cost = parseInt(prompt('총 구입액을 입력하세요'));
-        let discountCost = '';
+        let totalPrice = parseInt(prompt('총 구입가격을 작성하세요'));
+        let discountCost = 0;
         let discountRate = '';
 
-        if(cost>=10000){
-            discountCost = cost*0.9;
-            discountRate = 10;
-        }else if(cost>=5000){
-            discountCost = cost*0.95;
-            discountRate = 5;
-        }else if(cost>=3000){
-            discountCostt = cost*0.97;
-            discountRate = 3;
-        }else if(cost>=1000){
-            discountCost = cost*0.99;
-            discountRate = 1;
+        if(totalPrice>=10000){
+            discountCost = totalPrice * 0.9
+            discountRate = '적용된 할인율은 10% 입니다.'
+        }else if(totalPrice>=5000){
+            discountCost = totalPrice * 0.95
+            discountRate = '적용된 할인율은 5% 입니다.'
+        }else if(totalPrice>=3000){
+            discountCost = totalPrice * 0.97
+            discountRate = '적용된 할인율은 3% 입니다.'
+        }else if(totalPrice>=1000){
+            discountCost = totalPrice * 0.99
+            discountRate = '적용된 할인율은 1% 입니다.'
         }else{
-            alert('할인이 적용되지 않습니다.')
-            discountCost = cost;
-            discountRate = 0;
+            discountCost = totalPrice
+            discountRate = '적용된 할인율은 없습니다.'
         }
 
-        document.write('총 구입액(정가) : ￦' + cost + '<br/>');
-        document.write('총 구입액(할인가) : ￦' +  discountCost + '<br/>');
-        document.write('(적용된 할인율 : ' + discountRate + '%)');*/
+        document.write('기존 구입가격 : ' + totalPrice + '<br />');
+        document.write('할인된 구입가격 : ' + discountCost + '<br />');
+        document.write(discountRate);*/
 
 
 /*         //------------------------ 과제 (4)
-        //회원 등급 산정 프로그램 작성, 등급과 등급에 따른 혜택을 정하여 출력하기
-        //6개월간에 회원이 구입한 구입가격을 다 더해서 30만원 이상이면 골드, 20만원 실버, 10만원 브론즈 회원으로
-        //나눠주는 패밀리회원 이런식으로 나누어주기, input으로 그냥 받기 totalprice변수받아서 하기 
+        //회원 등급 산정 프로그램(등급 + 등급혜택 출력)
+        //input으로 그냥 받기 totalprice변수받아서 하기 
 
         let totalPrice = parseInt(prompt('6개월간 구입한 총 가격을 입력하세요'));
         let grade = '';
@@ -277,10 +262,7 @@
 
         document.write('6개월 총 구입금액 : ￦' + totalPrice + '<br />');
         document.write('회원님의 등급은 ' + grade + '입니다.' +'<br />');
-        document.write('('+  benefit  +')');*/
-
-
-
+        document.write('('+  benefit  +')'); */
 
     </script>
 
