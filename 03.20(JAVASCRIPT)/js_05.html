@@ -133,6 +133,42 @@
         document.write('당신의 성별은 ' + gender + '입니다.'); */
 
 
+        
+/*         //------------------------ 예제 (4)
+        //국어,수학, 영어점수를 입력 받아, 총점과 평균을 구하고 학점 출력하기
+
+        let kor = parseInt(prompt('국어점수를 입력하세요'));
+        let mat = parseInt(prompt('수학점수를 입력하세요'));
+        let eng = parseInt(prompt('영어점수를 입력하세요'));
+
+        let sum = kor + mat + eng;
+        let ave = parseInt(sum /3); 
+        //소수점 없이 정수형으로 만들기 / 한줄로 줄이면 복잡성이 커지므로 잘 짠 로직이 아님 // 가독성과 수정할때 불편함
+
+        let score = '';
+
+        if(ave>=90){
+            score = 'A';
+        }else if(ave>=80){
+            score ='B';
+        }else if(ave>=70){
+            scoer = 'C';
+        }else if(ave>=60){
+            score = 'D';
+        }else{
+            score = 'F';
+        }
+
+        
+
+        document.write('국어점수 : ' + kor + '<br />');
+        document.write('수학점수 : ' + mat + '<br />');
+        document.write('영어점수 : ' + eng + '<br />');
+        document.write('총   점 : ' + sum + '<br />');
+        document.write('평   균 : ' + ave + '<br />');
+        document.write('학   점 : ' + score + '<br />'); */
+
+
 
 /*         //------------------------ 과제 (1)
         //회원탈퇴시 나타나는 알림창에서 확인을 선택했을 경우 '정상적으로 탈퇴되었습니다.'
@@ -176,42 +212,7 @@
 
 
 
-/*         //------------------------ 과제 (3) (완료)
-        //국어,수학, 영어점수를 입력 받아, 총점과 평균을 구하고 학점 출력하기
-
-        let kor = parseInt(prompt('국어점수를 입력하세요'));
-        let mat = parseInt(prompt('수학점수를 입력하세요'));
-        let eng = parseInt(prompt('영어점수를 입력하세요'));
-
-        let sum = kor + mat + eng;
-        let ave = parseInt(sum /3); 
-        //소수점 없이 정수형으로 만들기 / 한줄로 줄이면 복잡성이 커지므로 잘 짠 로직이 아님 // 가독성과 수정할때 불편함
-
-        let score = '';
-
-        if(ave>=90){
-            score = 'A';
-        }else if(ave>=80){
-            score ='B';
-        }else if(ave>=70){
-            scoer = 'C';
-        }else if(ave>=60){
-            score = 'D';
-        }else{
-            score = 'F';
-        }
-
-        
-
-        document.write('국어점수 : ' + kor + '<br />');
-        document.write('수학점수 : ' + mat + '<br />');
-        document.write('영어점수 : ' + eng + '<br />');
-        document.write('총   점 : ' + sum + '<br />');
-        document.write('평   균 : ' + ave + '<br />');
-        document.write('학   점 : ' + score + '<br />'); */
-
-
-/*         //------------------------ 과제 (4)
+/*         //------------------------ 과제 (3)
         //쇼핑몰에서 구입가격에 따라 할인율을 달리하여 결제하는 이벤트 진행
         //할인율을 이용하여 구입가와 할인가 출력하기 
 
@@ -251,7 +252,7 @@
         document.write('(적용된 할인율 : ' + discountRate + '%)');*/
 
 
-/*         //------------------------ 과제 (5)
+/*         //------------------------ 과제 (4)
         //회원 등급 산정 프로그램 작성, 등급과 등급에 따른 혜택을 정하여 출력하기
         //6개월간에 회원이 구입한 구입가격을 다 더해서 30만원 이상이면 골드, 20만원 실버, 10만원 브론즈 회원으로
         //나눠주는 패밀리회원 이런식으로 나누어주기, input으로 그냥 받기 totalprice변수받아서 하기 
