@@ -1,0 +1,113 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+
+
+/* ******************** header ********************* */
+
+.header h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+/* ******************** lnb ********************* */
+
+.lnb{
+    overflow: hidden;}
+
+.lnb li{
+    width: 20%;height: 30px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+}
+
+
+/* ******************** visual_main ********************* */
+
+.visual_main{
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+
+
+
+/* ******************** event ********************* */
+
+    
+.event div{
+    height: 100px;
+    background-color: pink;
+    text-align: center;
+    line-height: 100px;
+    border: 1px solid #000;
+    box-sizing: border-box;}
+
+
+/* ******************** notice ********************* */
+
+
+
+
+.notice{overflow: hidden;}
+.notice div{
+    width: 50%;height: 200px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    float: left;
+}
+
+
+
+/***************** 다른 버전
+    .notice{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.notice div{
+    width: 50%;
+    height: 200px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    flex-grow: 1; 가로의 100%에 몇개가 들어가던 꽉 채우겠다는것 
+    margin-right: 10px; */
+
+
+/* ******************** footer ********************* */
+
+
+.footer{
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+
+
+
+/* ******************** media ********************* */
+@media all and (min-width:321px) and (orientation:landscape){
+    .event{overflow: hidden;}
+    .event div{
+     width: 50%;
+     float: left;
+    }
+    .notice div{
+        width: 25%;
+    }
+}
+    
+/***************** 다른버전
+    .notice_box{
+    overflow: hidden;
+    }
+
+    .notice_box .notice{
+        width: 50%;
+        float: left;
+    } */
+
+

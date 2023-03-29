@@ -1,0 +1,220 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+
+/*****************************header*******************/
+
+.header{
+    width: 1070px;height: 190px;
+    /* 높이를 잡지않는게 트렌드지만, 그럴경우 bgc가 잡히지않음 */
+    background-color: #ccc;
+    margin: 0 auto;
+    /* auto는 가운데정렬이아닌 양쪽 마진을 똑같이 주는것임
+    즉 width 잡지않으면 적용이 안된다 */
+}
+
+.header .gnb{
+    overflow: hidden;
+    /* overflow는 float의 부모에 적용, 잘 사용하지않음 */
+    /*  
+    content: "";
+    display: block;
+    clear: both;
+    */
+}
+.header .gnb ul{
+    float: right;
+}
+.header .gnb ul li{
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 11px;
+    cursor: pointer;
+}   
+
+.header .logo{
+    width: 100px;height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 100px;/* 높이 같게 주면 가운데 정렬느낌으로 온다 */
+    margin: 10px auto;
+}
+
+.header .lnb ul{
+    width: 100%;
+}
+.header .lnb ul li{
+    width: 20%;height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;/* height가 생략되면 , 밑에 영역 깨져서 부모에 overflow필수지만 정확해서 오류X */
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.header .lnb ul li:hover{/* hover는 띄어쓰기 주의해야함 */
+    background-color: #ccc;
+    color: black;
+}
+
+
+
+
+/*****************************visual_main*******************/
+.visual_ex{
+    width: 100%;height: 300px;
+    background-color: #ccc;
+    margin: 100px 0;
+}
+
+.visual_ex .visual_main{
+    width: 1070px;height: 300px;
+    border: 1px solid black;
+    box-sizing: border-box/* border solid로 넘치는 부분을 안으로 넣기 */;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 300px;
+
+}
+
+/*****************************content_top*******************/
+.content_top, .content_bottom{
+    width: 1070px;
+    margin: 0 auto;
+}
+
+.event,.product {
+    width: 100%;height: 530px;
+    background-color: #ccc;
+    margin-bottom: 50px;
+}
+
+.event .event_sub, .product .pro{
+    width: 530px;height: 530px;
+    background-color: #999;
+    float: left;
+}
+
+.event .event_left{
+    margin-right: 10px;
+}
+
+.event .event_right .eve{
+    width: 530px;height: 260px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.event .event_right .event_right_top{
+    margin-bottom: 10px;
+}
+
+.product .product_left{
+    margin-right: 10px;
+}
+
+.product .pro .pro_sub{
+    width: 530px;height: 260px;
+    background-color: #999;
+    float: left;
+}
+
+.product .pro .pro_sub div{
+    width: 260px;height: 260px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+}
+
+.product .pro .product_top {
+    margin-bottom: 10px;
+}
+
+.product .pro .pro_sub div:nth-child(1){margin-right: 10px;}
+
+
+
+/*****************************wide_banner*******************/
+.wide_banner{
+    width: 100%;height: 300px;
+    background-color: #ccc;
+    margin-bottom: 50px;
+    text-align: center;
+    line-height: 300px;
+}
+
+
+/*****************************content_bottom*******************/
+
+.best {
+    width: 100%;height: 410px;
+    background-color: #ccc;margin-bottom: 50px;
+}
+.best .best_item{
+    width: 830px;height: 410px;
+    float: right;
+    background-color: #999;
+}
+
+.best .best_item .best_sub{
+    width: 100%;height: 200px;
+/*     background-color: yellow; */
+}
+
+.best .best_item .best_top{
+    margin-bottom: 10px;
+}
+
+.best .best_item .best_sub div{
+    width: 200px;height: 200px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 10px;
+}
+
+.best .best_item .best_sub div:last-child{margin: 0;}
+
+.insta{
+    width: 100%;height: 428px;
+    background-color: #ccc;
+}
+
+.insta li{
+    width: 214px;height: 214px;
+    float: left;
+    border: 1px solid black;box-sizing: border-box;
+    float: left;
+}
+
+
+
+
+/*****************************footer_ex*******************/
+
+.footer_ex{
+    width: 100%;
+    height: 214px;
+    background-color: #ccc;
+    margin-top: 50px;
+}
+.footer{
+    width: 1070px;height: 214px;
+    background-color: #999;
+    margin: 0 auto;
+}
+
+.footer .footer_logo{
+    width: 214px;height: 214px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    float: left;
+    margin-right: 10px;
+}
+.footer .copy{
+    width: calc(100% -(214px +10px)); height: 214px;
+    border: 1px solid black;
+    box-sizing: border-box;    
+    float: left;
+}

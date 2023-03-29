@@ -1,0 +1,74 @@
+*{margin: 0;padding: 0;}
+img{display: block;}
+li{list-style: none;}
+
+/* *************** header ***************** */
+h1{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+/* *************** lnb ***************** */
+
+.lnb li{
+    width: 20%;height: 30px;
+    /* 넓이는 비율잡기쉽지만, 높이는 어렵다 그래서 생략하는게 트렌드 */
+    background-color: #ccc;
+    text-align: center;
+    line-height: 30px;
+    float: left;
+}
+
+
+.visual_main img{
+    width: 100%;
+}
+
+/* *************** event ***************** */
+.event{
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.event div{
+    width: 49%;
+    float: left;
+/* overflow: hidden; */
+}
+
+.evnet div:first-child{margin-right: 2%;}
+.evnet div img{
+    width: 100%;
+}
+
+
+/* *************** news ***************** */
+
+.news{overflow: hidden;}
+.news .news_img{
+    width: 100px;height: 100px;
+    float: left;
+    margin-right: 2%;
+}
+
+.news .news_img img{
+    width: 100%;
+}
+
+.news .news_txt{
+    width: calc(100% - 100px - 2%);
+    height: 100px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    float: left;
+}
+
+/* *************** footer ***************** */
+.footer{
+    height: 30px;
+    background-color: black;
+    color: white;
+    line-height: 30px;
+}

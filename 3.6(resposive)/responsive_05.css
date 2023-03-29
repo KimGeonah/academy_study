@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;}
+html{font-size: 14px;}
+/* rem의 기본 폰트 기준을 바꿔줌, 포폴 기획할때 폰트단위 :rem 기입 */
+
+.title{
+    font-size: 3rem;
+}
+
+.txt01{
+    font-size: 2rem;
+}
+
+.txt02{
+    font-size: 1rem;
+}
+
+.txt03{
+    font-size: 16px;
+}

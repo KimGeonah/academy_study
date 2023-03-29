@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;}
+.wrap{font-size: 14px;}
+/* em은 부모사이즈에 영향을 받기 때문에 부모속성을 설정해야한다 */
+
+.title{
+    font-size: 3em;
+}
+
+.txt01{
+    font-size: 2em;
+}
+
+.txt02{
+    font-size: 1em;
+}
+
+.txt03{
+    font-size: 16px;
+}

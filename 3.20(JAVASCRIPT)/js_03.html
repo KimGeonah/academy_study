@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script>
+
+
+/*         ------------------- 복합대입연산자
+
+        //let은 두번째 사용할때 생략이 가능하다
+
+        let sum=0;
+
+        let input=parseInt(prompt('첫번째 누적할 숫자 입력'));
+        sum += input;
+        alert('첫번째 누적합 : ' + sum);
+
+        input = parseInt(prompt('두번째 누적할 숫자 입력'));
+        sum += input;
+        alert('두번째 누적합 : ' + sum);
+
+        input =parseInt(prompt('세번째 누적할 숫자 입력'));
+        sum += input;
+        alert('세번째 누적합 : ' + sum); */
+
+
+/*         ------------------- 복합대입연산자를 이용한 테이블 만들기
+
+        let table = '<table border="1" width="300px">';
+        
+        table += '<tr>';
+        table += '<td>1</td>';
+        table += '<td>2</td>';
+        table += '<td>3</td>';
+        table += '</tr>';
+
+        table += '<tr>';
+        table += '<td>4</td>';
+        table += '<td>5</td>';
+        table += '<td>6</td>';
+        table += '</tr>';
+
+        table += '</table>';
+
+        document.write(table); */
+
+
+/*         //---------------------과제1) 두수를 입력받아 사칙연산결과를 출력
+
+        let num1 = 10;
+        let num2 = 5;
+
+        //let add = 0; 덧셈
+        //let sub = 0; 뺄셈
+        //let mult = 0 곱셈
+        //let div = 0 나눗셈
+        //let left = 0 나머지
+        //let avg = 0 평균
+
+        //let result; result01~07이렇게 써도 되지만, 구분을위해 다른 명사사용하기
+        //clear하기위해 0으로 정의함(clear는 0으로 쓰는 습관이 좋다)
+
+
+        add = num1 + num2;
+        sub = num1 - num2;
+        mult = num1 * num2;
+        div = num1 / num2;
+        left = num1 % num2;
+        avg = (num1 + num2) / 2;
+
+
+        document.write('첫번째 수 : ', num1, '<br/>');
+        document.write('두번째 수 : ', num2, '<br/>');
+        document.write('두수의 합 : ' + add + '<br/>');
+        document.write('두수의 차 : ' + sub + '<br/>');
+        document.write('두수의 곱 : ' + mult + '<br/>');
+        document.write('두수의 몫 : ' + div + '<br/>');
+        document.write('두수의 나머지 : ' + left + '<br/>');
+        document.write('두수의 평균 : ' + avg + '<br/>'); */
+
+
+/*         //---------------------과제2) 국어,영어,수학점수를 변수에 할당하여 총점과 평균을 출력(prompt)
+
+
+        let kor = parseInt(prompt('국어점수 입력:'));
+        let eng = parseInt(prompt('영어점수 입력:'));
+        let math = parseInt(prompt('수학점수 입력:'))
+        //prompt는 입력받으면 다 문자로 인식, parseInt사용해서 숫자로 변환하기
+
+        let sum = kor + eng + math;
+        let ave = sum / 3;
+
+        document.write('국어점수 : ', kor, '<br/>');
+        document.write('영어점수 : ', eng, '<br/>');
+        document.write('수학점수 : ', math, '<br/>');
+        document.write('총점 : ', sum, '<br/>');
+        document.write('평균 : ', ave, '<br/>');  */
+
+
+/*         //---------------------과제3) 아디 패스워드를 입력받아 하나의 변수로 출력
+        (alart로 입력받고 아이드는 ~ 입니다 라고 알림창띄우기)
+
+        alart로 입력받고 너의 아이디는 뭐다 뭐다 이걸 알림창으로 띄우기
+        let userId = prompt('아이디 입력');
+        let userPw = prompt('암호 입력');
+        alert('당신의 아이디는 ' + userId + '입니다.'); */
+
+
+/*         //---------------------과제4) 반지름을 입력받아 원의 둘레와 넓이를 출력
+        let radius = parseInt(prompt('반지름 입력'));
+
+        let circle = 0; //원의 둘레
+        let circleArea = 0; //원의 넓이
+        const PI = 3.14; 
+
+        circle = radius * PI * 2;
+        circleArea = radius * radius * PI;
+
+
+        document.write('반지름 : ' + radius + '<br/>');
+        document.write('원의 둘레 : ' + circle + '<br/>');
+        document.write('원의 넓이 : ' + circleArea + '<br/>');*/
+
+
+/*         //---------------------과제5)초기값은 10으로 할당하고(변수로), 1씩 증가하면서 사칙연산을 복합대입연산자를 이용하여 계산 
+        //ex) 더하기는 11, 빼기는 12
+
+        let num = 10;
+
+        num += 11;
+        document.write('복합대입 더하기(num+=11) : ', num, '<br />');
+
+        num -= 12;
+        document.write('복합대입 빼기(num-=12) : ', num, '<br />');
+
+        num *= 13;
+        document.write('복합대입 곱하기(num*=13) : ', num, '<br />');
+
+        num /= 14;
+        document.write('복합대입 나누기(num/=14) : ', num, '<br />'); */
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

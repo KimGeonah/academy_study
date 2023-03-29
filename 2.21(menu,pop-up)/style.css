@@ -1,0 +1,387 @@
+* {margin: 0;padding: 0;}
+li{list-style: none;}
+a{color: black;text-decoration: none;}
+body{height: 3000px;}
+
+
+/* ********************popup************************* */
+#popup_chk{display: none;}
+#popup_chk:checked ~ .popup{display: block;}
+#popup_chk ~ .popup{display: none;}
+/* 체크했을때 팝업이 보이고 */
+/* 체크안했을때 팝업이 none된다 */
+/* ~ : 아이디에 해당하는 태그의 형제(같은레벨)중 아래에있는 동생태크  */
+
+.popup{
+    z-index: 9999;/* 9999:절대 밑에 깔리면 안된다는 의미 */
+    /* z-index는 position이 필요한데 하단에 이미 있어서 생략함 */
+    width: 300px; height: 300px;
+    background-color: #ccc;
+    padding: 10px;
+    position: absolute;
+    top: 100px;left: 100px;
+}
+
+.popup p{
+    width: 300px;height: 250px;
+    border: 1px solid #000;
+}
+
+.popup .popup_close{
+    margin-left: 280px;
+    margin-top: 20px;
+}
+
+
+/* ********************popup_icon************************* */
+
+#icon_chk{display: none;}/* 체크박스를 감추는것 */
+
+#icon_chk:checked ~ .icon{display: block;}
+#icon_chk ~.icon{display: none;}
+
+.icon{
+    position: fixed;
+    top: 500px;left: 100px;
+    width: 200px;height: 200px;
+    animation-name: popup_icon;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes popup_icon{
+    0%{top: 500px;}
+    50%{top: 480px;}
+    100%{top: 500px;}
+}
+
+.icon_inner{
+    position: relative;
+    width: 200px;height: 200px;
+}
+
+.icon .icon_inner div{
+    width: 200px;height: 200px;
+    background-color: yellow;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 200px;
+}
+
+.icon label{
+    display: block;
+    width: 10px;height: 20px;
+    position: absolute;
+    bottom: 0px;right: 0px;
+}
+
+
+/* ********************top_btn********************* */
+.top_btn{
+    position: fixed;
+    bottom: 100px;right: 100px;
+    display: block;
+    width: 50px;height: 50px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+}
+
+/* ******************** header ************************* */
+.header{
+/*     position: fixed;
+    top: 0;left: 0; */
+    width: 100%;height: 200px;
+    background-color: #ccc;
+}
+
+.lnb{
+    position: sticky;
+    top: 0;
+    width: 100%; height: 50px;
+    background-color: yellow;
+}
+
+
+
+
+/* ********************lnb_01************************* */
+.lnb_01,.lnb_02, .lnb_03, .lnb_04{
+    width: 1000px;height: 50px;
+    margin: 0 auto;
+}
+
+.lnb_01 li{
+    width: 200px;height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.lnb_01 li:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+/* ********************lnb_02************************* */
+
+.lnb_02 li{
+    width: 200px;height: 50px;
+    float:left;}
+
+.lnb_02 li a{
+    /* a는 인라인인데 블록으로 바꾸고, li에 갇혀있는상태
+    따라서 블록에 커서를 올렸을때 전부다 포인터가 적용된다 */
+    display: block;
+    text-align: center;
+    line-height:50px;
+    background-color: #000;
+    color: white;
+}
+
+.lnb_02 li a:hover{
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+/* ********************lnb_03********************** */
+
+
+/* .lnb_03 li li{display: none;}
+.lnb_03 li:hover li{display:block;}  */
+
+ /* 상위메뉴에 해당하는 하위만 나타내기 */
+/* display:none에는 transition 줄수 없다, fadein-out은 opacity0으로 줘야함 */
+
+/* .lnb_03 li li{display: none;}
+.lnb_03:hover li li{display: block;}  */
+
+/* 풀다운메뉴/전체다 떨어뜨리기 */
+
+.lnb_03{
+    position: relative;/* 자기자리를 고수하면서,위아래 내려오는것 */
+    z-index: 2;
+}
+
+.lnb_03 ul{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s 0.2s;
+}
+
+.lnb_03:hover ul{
+    height: 200px;
+}
+
+
+.lnb_03 li{
+    width: 200px;height: 50px;
+    float: left;
+}
+
+.lnb_03 li a{
+    display: block;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    transition :all 0.5s;
+}
+
+.lnb_03>li>a:hover{
+    background-color: #ccc;
+    color: #000;
+}
+/* 과제 : 하위메뉴 색상도 다르게 변경하기 */
+
+/* ********************lnb_04********************** */
+
+.lnb_04{
+    position: relative;
+    z-index: 1;
+}
+/* z-index는 포지션을 가진 친구들끼리 가능하다 */
+
+.lnb_04 ul{
+    width: 800px;
+}
+
+.lnb_04 li{
+    width: 200px;height: 50px;
+    float: left;
+}
+
+.lnb_04 li a{
+    display: block;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    transition :all 0.5s;
+}
+
+.lnb_04>li>a:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+
+.lnb_04 li li{display: none;}
+.lnb_04 li:hover li{display:block;}  
+
+
+
+
+
+
+/* ********************lnb_05********************** */
+#ham_chk{display: none;}
+/* #ham_chk:checked ~ .menu_box .menu_list{display: block;}
+#ham_chk ~ .menu_box .menu_list{display: none;} */
+
+#ham_chk:checked ~ .menu_box .menu_list{height: 300px;}
+
+#ham_chk:checked ~ .menu_box .lnb_05 .menu_close{display: block;}
+#ham_chk:checked ~ .menu_box .lnb_05 .menu_open{display: none;}
+
+#ham_chk ~ .menu_box .lnb_05 .menu_close{display: none;}
+#ham_chk ~ .menu_box .lnb_05 .menu_open{display: block;}
+
+.menu_box{
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.menu_box .lnb_05{
+    width: 1050px;height: 50px;
+}
+
+.menu_box .lnb_05 label{
+    display: block;
+    width: 50px;height: 50px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    font-size: 40px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    float: left;
+}
+
+.menu_box .lnb_05 ul{
+    width: 1000px;
+    float: left;
+}
+
+.menu_box .lnb_05 ul li{
+    width: 200px;height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    float: left;/* 모든속성을 넣고나서 float을 넣어주는게 낫다 */
+}
+
+.menu_box .menu_list{
+/*     width: 1050px;height: 200px; 상단 주석 2줄 세트*/
+    width: 1050px;height: 0;
+    overflow: hidden;
+    background-color: #ccc;
+    transition: all 0.2s;
+}
+
+
+/* ********************wing_banner********************* */
+
+#wing_chk{display: none;}
+#wing_chk:checked ~.wing_banner {right:0;}
+#wing_chk ~.wing_banner {right:-300px;}
+
+#wing_chk:checked ~ .wing_banner .wing_close{display: block;}
+#wing_chk:checked ~ .wing_banner .wing_open{display: none;}
+
+#wing_chk ~ .wing_banner .wing_close{display: none;}
+#wing_chk ~ .wing_banner .wing_open{display: block;}
+
+.wing_banner{
+    position: fixed;
+    top: 0;right: -300px;
+    width: 330px;height: 100vh;/* 뷰포트 */
+    border: 1px solid #000;
+    transition: all 0.3s;
+}
+
+
+.wing_banner label{
+    display: block;
+    width: 30px;height: 30px;
+    background-color: yellow;
+    float: left;
+    margin-top: 200px;
+}
+
+.wing_banner .wing{
+    width: 300px;height: 100%;/* 부모의 100%로 채운다 */
+    background-color: #ccc;
+    float: left;
+}
+
+/* ******************** tab_menu ********************* */
+#tap01, #tap02, #tap03{display: none;}
+
+#tab01:checked ~ .sheet .sheet_01{display: block;}
+/* #tab01:checked ~ .sheet .sheet_02{display: none;}
+#tab01:checked ~ .sheet .sheet_03{display: none;} */
+
+
+/* #tab02:checked ~ .sheet .sheet_01{display: none;} */
+#tab02:checked ~ .sheet .sheet_02{display: block;}
+/* #tab02:checked ~ .sheet .sheet_03{display: none;} */
+
+/* #tab03:checked ~ .sheet .sheet_01{display: none;}
+#tab03:checked ~ .sheet .sheet_02{display: none;} */
+#tab03:checked ~ .sheet .sheet_03{display: block;}
+
+
+#tab01:checked ~ .label .label_01{background-color: yellow;}
+#tab02:checked ~ .label .label_02{background-color: yellow;}
+#tab03:checked ~ .label .label_03{background-color: yellow;}
+
+
+
+.tab_menu{
+    width: 1000; height: 450px;
+    margin: 0 auto;
+}
+
+.tab_menu .label{overflow: hidden;}
+.tab_menu .label label{
+    display: block;
+    width: 150px;height: 50px;
+    background-color: #ccc;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+}
+
+.tab_menu .sheet div{
+    display: none;/* 기본설정 none으로 해서, 상단영역 전부 주석처리 */
+    width: 1000px;height: 400px;
+    background-color: yellow;
+}

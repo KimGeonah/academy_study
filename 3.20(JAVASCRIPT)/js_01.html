@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+<!-- java script의 script는 head나 body에 들어갈수있다 
+    우리나라는 head에 넣는 추세다. 속도가 조금더 빠르다, 한번에 작성가능
+    외국은 body에 넣는데 느리고 객체마다따로 스크립트 써야함-->
+
+    <script>
+
+        document.write('Hello, JavaScript!');
+        /* 객체.객체가 실행(괄호안내용을); - 괄호는 함수
+            즉, document에 쓰겠다. hello ~ 를!
+            마지막 세미콜론은 생략가능하고 줄이는 트렌드이다
+            그런데 대부분 다 찍는다. 문장이 끝남을 알려주기때문에
+            DOM (document Object Model)
+        */
+        document.write('Hello,' + '<font color="red">' + 'JavaScript' + '</font>');
+        //더하기는 따옴표('')안에 들어가면 절대 안된다, red같은 태그 내부 속성은 구분을 위해 쌍따옴표 사용("")
+        //1 + 1 = 2 , '1' + '1' = 11로 인식된다
+        //(중요)0을 제외한 모든 숫자, 문자는 true
+
+        document.write(1+1);
+        //변수는 미리 사용한다음에 생성할수있다. ex) c = 1+1
+        //변수선언은 사용을 위해 변수를 생성하는것이다.
+        //let(변하는값)과 const(절대값)을 키워드 뒤에 식별자를 사용하여 변수선언
+        
+        //  <변수선언규칙>
+        //  1.영문자, 특수문자(_,$)사용
+        //  2.키워드를 사용할 수 없음
+        //  3.숫자로 시작하면 안됨
+        //  4.공백문자 포함할 수 없음
+
+        //  <그 외>
+        //  1.클래스 이름은 대문자로 시작한다
+        //  2.변수, 함수, 속성, 메소드의 이름은 항상 소문자로 시작
+        //  3.여러 단어로 되었을 경우 각 단어의 첫글자는 대문자로 시작(낙타등 표기법 : camel)
+        //  ex)btnBotton -> 소문자로 시작하며 뒷단어는 _를 사용하지않고 대문자로 구분
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

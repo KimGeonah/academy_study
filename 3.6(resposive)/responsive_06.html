@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive_06</title>
+    <link rel="stylesheet" href="responsive_06.css">
+</head>
+
+<body>
+    <!-- picture는 큰 사이즈 부터 잡아줘야한다 -->
+
+    <div class="picture">
+        <picture>
+            <source media="(min-width:769px)" srcset="./img/res_pc.jpg">
+            <source media="(min-width:601px)" srcset="./img/res_tablet.jpg">
+            <source media="(min-width:320px)" srcset="./img/res_mobile.jpg">
+            <img src="./img/source_img.jpg" alt="소스이미지" style="width: 100%;">
+        </picture>
+    </div>
+
+</body>
+
+</html>

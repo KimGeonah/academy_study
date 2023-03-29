@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- 팝업은 보통 상단에 올려다준다(유지보수들을 위해) -->
+    <div class="popup_box">
+        <input type="checkbox" id="popup_chk" checked><!-- chk는 체크박스 -->
+        <div class="popup">
+            <p>popup</p>
+            <label for="popup_chk" class="popup_close">X</label>
+        </div>
+    </div><!-- popup -->
+
+
+    <div class="popup_icon_box">
+        <input type="checkbox" id="icon_chk" checked>
+        <div class="icon">
+            <div class="icon_inner">
+                <div>popup_icon</div>
+                <label for="icon_chk" class="icon_close">X</label>
+            </div>
+        </div>
+    </div><!-- popup_icon-->
+
+    
+    <a href="#header" class="top_btn">TOP</a>
+    <!-- html a태그의 #은 기본설정이 상단이동이다 -->
+    <!-- #! :#뒤에 !를 붙이면 임시링크의 동작을 제어하는것(삭제) -->
+    <!-- #header : 클릭하면 header id가 있는곳으로 이동한다 -->
+
+    <header class="header">logo / gnb</header>
+    <nav class="lnb"> lnb </nav>
+
+
+    <ul class="lnb_01" id="header">
+        <li>menu01</li>
+        <li>menu02</li>
+        <li>menu03</li>
+        <li>menu04</li>
+        <li>menu05</li>
+    </ul>
+    <br /> <!-- lnb_01 -->
+
+    <ul class="lnb_02">
+        <li><a href="#">menu01</a></li>
+        <li><a href="#">menu02</a></li>
+        <li><a href="#">menu03</a></li>
+        <li><a href="#">menu04</a></li>
+        <li><a href="#">menu05</a></li>
+    </ul>
+    <br /> <!-- lnb_02 -->
+
+    <ul class="lnb_03">
+        <li><a href="#">menu01</a>
+            <ul>
+                <li><a href="#">menu01-1</a></li>
+                <li><a href="#">menu01-2</a></li>
+                <li><a href="#">menu01-3</a></li>
+                <li><a href="#">menu01-4</a></li>
+            </ul>
+        </li><!-- menu01 -->
+
+        <li><a href="#">menu02</a>
+            <ul>
+                <li><a href="#">menu02-1</a></li>
+                <li><a href="#">menu02-2</a></li>
+                <li><a href="#">menu02-3</a></li>
+                <li><a href="#">menu02-4</a></li>
+            </ul>
+        </li><!-- menu02 -->
+
+        <li><a href="#">menu03</a>
+            <ul>
+                <li><a href="#">menu03-1</a></li>
+                <li><a href="#">menu03-2</a></li>
+                <li><a href="#">menu03-3</a></li>
+                <li><a href="#">menu03-4</a></li>
+            </ul>
+        </li><!-- menu03 -->
+
+        <li><a href="#">menu04</a>
+            <ul>
+                <li><a href="#">menu04-1</a></li>
+                <li><a href="#">menu04-2</a></li>
+                <li><a href="#">menu04-3</a></li>
+                <li><a href="#">menu04-4</a></li>
+            </ul>
+        </li><!-- menu04 -->
+
+        <li><a href="#">menu05</a>
+            <ul>
+                <li><a href="#">menu05-1</a></li>
+                <li><a href="#">menu05-2</a></li>
+                <li><a href="#">menu05-3</a></li>
+                <li><a href="#">menu05-4</a></li>
+            </ul>
+        </li><!-- menu05 -->
+
+    </ul>
+    <br /> <!-- lnb_03 -->
+
+    <ul class="lnb_04">
+        <li><a href="#">menu01</a>
+            <ul>
+                <li><a href="#">menu01-1</a></li>
+                <li><a href="#">menu01-2</a></li>
+                <li><a href="#">menu01-3</a></li>
+                <li><a href="#">menu01-4</a></li>
+            </ul>
+        </li><!-- menu01 -->
+
+        <li><a href="#">menu02</a>
+            <ul>
+                <li><a href="#">menu02-1</a></li>
+                <li><a href="#">menu02-2</a></li>
+                <li><a href="#">menu02-3</a></li>
+                <li><a href="#">menu02-4</a></li>
+            </ul>
+        </li><!-- menu02 -->
+
+        <li><a href="#">menu03</a>
+            <ul>
+                <li><a href="#">menu03-1</a></li>
+                <li><a href="#">menu03-2</a></li>
+                <li><a href="#">menu03-3</a></li>
+                <li><a href="#">menu03-4</a></li>
+            </ul>
+        </li><!-- menu03 -->
+
+        <li><a href="#">menu04</a>
+            <ul>
+                <li><a href="#">menu04-1</a></li>
+                <li><a href="#">menu04-2</a></li>
+                <li><a href="#">menu04-3</a></li>
+                <li><a href="#">menu04-4</a></li>
+            </ul>
+        </li><!-- menu04 -->
+
+        <li><a href="#">menu05</a>
+            <ul>
+                <li><a href="#">menu05-1</a></li>
+                <li><a href="#">menu05-2</a></li>
+                <li><a href="#">menu05-3</a></li>
+                <li><a href="#">menu05-4</a></li>
+            </ul>
+        </li><!-- menu05 -->
+
+    </ul>
+    <br /> <!-- lnb_04 -->
+
+    <input type="checkbox" id="ham_chk">
+    <div class="menu_box">
+        <nav class="lnb_05">
+            <label for="ham_chk" class="menu_open">+</label>
+            <label for="ham_chk" class="menu_close">-</label>
+            <ul>
+                <li>menu01</li>
+                <li>menu02</li>
+                <li>menu03</li>
+                <li>menu04</li>
+                <li>menu05</li>
+            </ul>
+        </nav>
+        <div class="menu_list">
+            <h1>menu_list</h1>
+        </div>
+    </div><!-- lnb_05 -->
+
+    <section class="tab_menu">
+        <!-- input은 ~로 하위메뉴 불러와야해서 묶어두면 안된다 -->
+        <input type="radio" name="tab" id="tab01" checked>
+        <input type="radio" name="tab" id="tab02">
+        <input type="radio" name="tab" id="tab03">
+
+        <div class="label">
+            <label for="tab01" class="label_01">공지사항</label>
+            <label for="tab02" class="label_02">Q&A</label>
+            <label for="tab03" class="label_03">오시는길</label>
+        </div>
+
+        <div class="sheet">
+            <div class="sheet_01">sheet_01</div>
+            <div class="sheet_02">sheet_02</div>
+            <div class="sheet_03">sheet_03</div>
+        </div>
+
+    </section><!-- tab_menu -->
+
+
+    
+    <asid class="wing_box"><!--asid:메인 아닌 없어도되는 사이드(윙배너,퀵메뉴) -->
+        <input type="checkbox" id="wing_chk">
+        <div class="wing_banner">
+            <label for="wing_chk" class="wing_open"><</label>
+            <label for="wing_chk" class="wing_close">X</label>
+            <div class="wing">
+                wing_banner
+            </div>
+        </div>
+    </asid><!-- wing_banner -->
+
+</body>
+
+</html>
