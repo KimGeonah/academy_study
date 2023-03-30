@@ -1,0 +1,80 @@
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+
+#gnb_chk{display: none;}
+#gnb_chk:checked ~ .gnb{display: block;}
+#gnb_chk ~ .gnb{display: none;}
+
+.header{
+    width: 100%; height: 45px;
+    background-image: url(./mobile_img/header_bg.png);
+    position: relative;
+}
+
+.header .home{
+    width: 62px;height: 32px;
+    background-image: url(./mobile_img/left_btn.png);
+    position: absolute;
+    top: 7px; left: 7px;
+    text-indent: -9999px;/* 들여쓰기(절대프레임에 들어올수 없는 수치) */
+}
+
+.header h1{
+    text-align: center;
+    line-height: 45px;
+    color: white;
+}
+
+.header .gnb_btn{
+    width: 32px;height: 32px;
+    background-image: url(./mobile_img/right_btn.png);
+    position: absolute;
+    top: 7px;right: 7px;
+    text-indent: -9999px;
+}
+
+body{overflow: hidden;}
+
+.gnb{float: right; }
+
+.gnb li{
+    background-color: #999;
+    border: 1px solid #ccc;
+    width: 65px;height: 30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+/* display:block/none 버전 한개, 밖으로 나갔다 들어왔다 transition한개 */
+
+
+.lnb{
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: absolute;
+    z-index: -9999;
+}
+
+.lnb li{
+    width: 20%;height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 11px;
+    float: left;
+    cursor: pointer;
+}
+
+
+
+.footer{
+    width: 100%;height: 45px;
+    background-color: black;
+    color:white;
+    position: fixed;
+    /* fixed를 사용할때는 width를 생략하면 절대 안된다 */
+    left: 0;bottom: 0;
+}
