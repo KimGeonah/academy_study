@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+    <script>
+
+
+/*         //-----------------------------if    
+        //아이디와 패스워드 입력해서, 내가 가진 데이터베이스와 일치하면 로그인 통과
+        //앞으로 테스트하는 결과물들 아이디 패스워드는 모든 과제 통일하기(+포폴은 팝업창으로 띄우기)
+        //작성했는데 제대로 작동하지 않는다면, 문자열 숫자열의 형변환 제대로 잡기
+
+        const id = 'green';
+        const pw = '1234';
+        //변하는 값이 아니니까 let 아닌 const로 정해도된다.
+
+
+        let userId = prompt('아이디 입력');
+        let userPw = prompt('암호 입력');
+
+        //비교연산자보다 논리연산자가 후순위인데 헷갈리면 괄호쓰기
+        if((userId === id) && (userPw === pw)){
+            alert('방문을 환영합니다!');
+        }else{
+            alert('로그인 실패입니다.');
+        } */
+
+
+/*         //-----------------------------중첩 if
+        //아이디를 비교 -> 일치하면 -> 패스워드 비교로 넘어가기
+
+        const id = 'green';
+        const pw = '1234';
+
+        let userId = prompt('아이디 입력');
+        //let userPw = prompt('암호 입력');
+        //아이디틀리면 암호 입력기회 상실하려면 if문 안에 넣으면됨
+
+        if(userId === id){
+            let userPw = prompt('암호 입력');
+            if(userPw === pw){
+                alert('방문을 환영합니다!');
+            }else{
+                alert('패스워드가 잘못되었습니다.');
+            }
+
+        }else{
+            alert('아이디가 존재하지 않습니다.');
+        } */
+
+
+/*         //-----------------------------중첩 if 예제1
+        //세개의 수를 입력 받아 큰 값, 중간 값, 작은 값 출력하기
+
+        let num1 = parseInt(prompt('첫번째 수를 입력하세요'));
+        let num2 = parseInt(prompt('두번째 수를 입력하세요'));
+        let num3 = parseInt(prompt('세번째 수를 입력하세요'));
+        let maxNum = 0;
+        let midNum = 0;
+        let minNum = 0;
+
+        if(num1>num2 && num1>num3){
+             if(num2>num3){
+                maxNum = num1;
+                midNum = num2;
+                minNum = num3;
+             }else{
+                maxNum = num1;
+                midNum = num3;
+                minNum = num2;
+             } 
+        }else if(num2>num3 && num2>num1){
+             if(num1>num3){
+                maxNum = num2;
+                midNum = num1;
+                minNum = num3;
+             }else{
+                maxNum = num2;
+                midNum = num3;
+                minNum = num1;
+             } 
+        }else if(num3>num1 && num3>num2){
+             if(num2>num1){
+                maxNum = num3;
+                midNum = num2;
+                minNum = num1;
+             }else{
+                maxNum = num3;
+                midNum = num1;
+                minNum = num2;
+             } 
+        }else{
+            alert('숫자가 아닙니다.')
+        }
+
+        document.write('첫번째 수 : ' + num1 + '<br/>');
+        document.write('두번째 수 : ' + num2 + '<br/>');
+        document.write('세번째 수 : ' + num3 + '<br/><br/>');
+
+        document.write('큰 값 : ' + maxNum + '<br/>');
+        document.write('중간 값 : ' + midNum + '<br/>');
+        document.write('작은 값 : ' + minNum + '<br/>');  */
+ 
+
+/*         //-----------------------------중첩 if 예제2
+        //성별을 입력받아, 남자일때 군필 (진짜 사나이입니다) 미필(그냥 사나이입니다)
+        //여자일때 '여자입니다.'
+        //그외 오타는 ' 잘못 입력 되었습니다'
+
+        //여자일때는 군필, 미필창을 비활성화 시켜버리기
+        //substr()사용해서, 군필이면 0 미필이면 1 사용해서 진짜 사나이 ~ 그냥 사나이~ 
+
+        
+        let no = prompt('주민등록번호 입력');
+        let gender = 0; */
+
+
+/*         //-----------------------------switch 공식
+        //switch문은 if문으로 바꿀수 있다.
+
+        let 변수 = 초기값
+        switch(변수){//변수에는 정수값, 수식 가능하지만 등식은 안됨
+            case 값1 : 실행문1;
+            break;
+            case 값2 : 실행문2;
+            break;
+            case 값3 : 실행문3;
+            break;
+            default:실행문4;
+        } */
+
+
+/*         //-----------------------------switch 예제
+        //은행 자동화기 메세지
+
+        let num=prompt('번호를 선택하세요!');
+        switch(num){
+            case 1 : document.write('예금조회');
+            break;
+            case 2 : document.write('예금출금');
+            break;
+            case 3 : document.write('예금입금');
+            break;
+            case 4 : document.write('예금이체');
+            break;
+            default:
+            document.write('잘못 눌렀음');
+        }
+ */
+
+
+/*         //-----------------------------switch 예제1
+        let menu = prompt('메뉴 선택 : pizza(p), spagetti(s), risotto(r), drink(d)');
+        switch(menu){
+            case 'P':
+            case 'p':
+            document.write('Pizza 주문'); break;
+            case 'S':
+            case 's':
+            document.write('spagetti 주문'); break;
+            case 'R':
+            case 'r':
+            document.write('risotto 주문'); break;
+            case 'D':
+            case 'd':
+            document.write('drink 주문'); break;
+            default:
+            document.write('메뉴에 없는 음식입니다.');
+        } */
+
+
+/*         //-----------------------------switch 예제2
+        //학점 계산 프로그램 제작, 총점 입력받고 학점은 A-F까지 출력
+        //JavaScript 내장객체함수 Math.floor()를 사용하면 뒤를 버림
+
+        let kor = parseInt(prompt('국어점수 입력하세요'));
+        let mat = parseInt(prompt('수학점수 입력하세요'));
+        let eng = parseInt(prompt('영어점수 입력하세요'));
+
+
+        let sum = kor + mat + eng;
+        let ave = parseInt(sum / 3);
+        let result = Math.floor(ave/10); //floor : 내림함수
+
+        switch(result){
+            case 10:
+            case 9:
+            document.write('학점 A'); break;
+            case 8:
+            document.write('학점 B'); break;
+            case 7:
+            document.write('학점 C'); break;
+            case 6:
+            document.write('학점 D'); break;
+            default:
+            document.write('학점 F');
+        } */
+
+
+/*         //-----------------------------switch 예제3
+        //사칙연산 계산기 프로그램 제작
+        //두개의 정수를 입력받고, 연산자 (+,-,*,/)중 하나를 입력하여 결과를 출력
+        //NUM1~NUM4입력받기
+
+        let num1 = parseInt(prompt('첫번째 숫자 입력'));
+        let num2 = parseInt(prompt('두번째 숫자 입력'));
+        let result = 0;
+
+        switch() */
+
+
+/*         //-----------------------------switch 예제4
+        //포털사이트로 이동하는 프로그램 만들기
+        //위치이동 객체 : location.href="http://"
+
+        let site = prompt('이동할 포털사이트명 입력 : naver, daum, google, nate 중 선택');
+        let url;
+
+        switch(site){
+            case 'naver' : url='www.naver.com'; break;
+            case 'daum' : url='www.daum.net'; break;
+            case 'google' : url='www.google.com'; break;
+            case 'nate' : url='www.nate.com'; break;
+            default: alert('잘못입력');
+        }
+
+        //url이 존재한다면
+        if(url){
+            location.href="http://" + url
+        } */
+
+
+        //-----------------------------switch 예제5
+        //지역명 입력하면 지역번호 알려주는 프로그램
+        //서울02 경기031 부산051 대구053 인천032 강원003
+        //광주062 대전042 울산052 전북063 전남061 제주064
+        //그 외는 '아직 등록되어 있지 않습니다.'
+        
+        
+        //추가 과제 switch case 전부다 if 문으로 바꿔서 사용해보기
+
+/*         let choose = prompt('숫자를 입력하세요');
+        let result = 0;
+
+        switch(choose){
+            case '1' : result='축구';break;
+            case '2' : result='야구';break;
+            case '3' : result='배구';break;
+            default: result='없는값이네요';
+        }
+
+        document.write(result); */
+
+        let 
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
