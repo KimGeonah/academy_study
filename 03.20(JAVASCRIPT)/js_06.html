@@ -54,57 +54,62 @@
         } */
 
 
-/*         //-----------------------------중첩 if 예제1
+/*          //-----------------------------중첩 if 예제1
+
         //세개의 수를 입력 받아 큰 값, 중간 값, 작은 값 출력하기
 
-        let num1 = parseInt(prompt('첫번째 수를 입력하세요'));
-        let num2 = parseInt(prompt('두번째 수를 입력하세요'));
-        let num3 = parseInt(prompt('세번째 수를 입력하세요'));
-        let maxNum = 0;
-        let midNum = 0;
-        let minNum = 0;
+        let num1 = parseInt(prompt('첫번째수'));
+        let num2 = parseInt(prompt('두번째수'));
+        let num3 = parseInt(prompt('세번째수'));
 
-        if(num1>num2 && num1>num3){
-             if(num2>num3){
-                maxNum = num1;
-                midNum = num2;
-                minNum = num3;
-             }else{
-                maxNum = num1;
-                midNum = num3;
-                minNum = num2;
-             } 
-        }else if(num2>num3 && num2>num1){
-             if(num1>num3){
-                maxNum = num2;
-                midNum = num1;
-                minNum = num3;
-             }else{
-                maxNum = num2;
-                midNum = num3;
-                minNum = num1;
-             } 
-        }else if(num3>num1 && num3>num2){
-             if(num2>num1){
-                maxNum = num3;
-                midNum = num2;
-                minNum = num1;
-             }else{
-                maxNum = num3;
-                midNum = num1;
-                minNum = num2;
-             } 
+        let max=0;
+        let mid=0;
+        let min=0;
+
+        if(num1>num2){
+            if(num1>num3){
+                max=num1;
+                if(num2>num3){
+                    mid=num2;
+                    min=num3;
+                }else{
+                    mid=num3;
+                    min=num2;
+                }
+            }
+        }else if(num2>num1){
+            if(num2>num3){
+                max=num2;
+                if(num1>num3){
+                    mid=num1;
+                    min=num3;
+                }else{
+                    mid=num3;
+                    min=num1;
+                }
+            }
+        }else if(num3>num2){
+            if(num3>num1){
+                max=num3;
+                if(num1>num2){
+                    mid=num1;
+                    min=num2;
+                }else{
+                    mid=num2;
+                    min=num1;
+                }
+            }
         }else{
-            alert('숫자가 아닙니다.')
+            alert('숫자가 아닌 값을 쓰셨어요 !')
         }
 
-        document.write('첫번째 수 : ' + num1 + '<br/>');
-        document.write('두번째 수 : ' + num2 + '<br/>');
-        document.write('세번째 수 : ' + num3 + '<br/><br/>');
+        document.write('첫번째 : ' + num1 + '<br/>');
+        document.write('두번째 : ' + num2 + '<br/>');
+        document.write('세번째 : ' + num3 + '<br/><br/>');
 
-        document.write('큰 값 : ' + maxNum + '<br/>');
-        document.write('중간 값 : ' + midNum + '<br/>');
-        document.write('작은 값 : ' + minNum + '<br/>');  */
+        document.write('큰 값 : ' + max + '<br/>');
+        document.write('중간 값 : ' + mid + '<br/>');
+        document.write('작은 값 : ' + min + '<br/>');  */
  
 
 /*         //-----------------------------중첩 if 예제2
@@ -116,45 +121,53 @@
         //substr()사용해서, 군필이면 0 미필이면 1 사용해서 진짜 사나이 ~ 그냥 사나이~ 
 
         
-        let no = prompt('주민등록번호 입력');
-        let gender = 0; */
+        let no = prompt('주민등록번호 입력','123456-1');
+        let gender = no.substr(7,1);
+        let army = 0;
+
+        if(gender=='1' || gender=='3'){
+            let army = prompt('군필이라면 0을, 미필이라면 1을 입력',0);
+            if(army == '0'){
+                alert('진짜 사나이입니다');
+            }else if(army == '1'){
+                alert('그냥 사나이입니다.');
+            }else{
+                alert('병역정보가 잘못 입력 되었습니다.')
+            }
+        }else if(gender=='2' ||gender=='4'){
+            alert('여자입니다.');
+        }else{
+            alert('주민등록번호가 잘못 입력 되었습니다.');
+        } */
 
 
 /*         //-----------------------------switch 공식
         //switch문은 if문으로 바꿀수 있다.
+        //switch의 변수에는 정수값, 수식 가능하지만 등식은 안됨
 
         let 변수 = 초기값
-        switch(변수){//변수에는 정수값, 수식 가능하지만 등식은 안됨
-            case 값1 : 실행문1;
-            break;
-            case 값2 : 실행문2;
-            break;
-            case 값3 : 실행문3;
-            break;
-            default:실행문4;
+        switch(변수){                      
+            case 값1 : 실행문1; break;
+            case 값2 : 실행문2; break;
+            case 값3 : 실행문3; break;
+            default : 실행문4;
         } */
 
 
-/*         //-----------------------------switch 예제
+/*         //-----------------------------switch 예제(if변환 가능)
         //은행 자동화기 메세지
 
         let num=prompt('번호를 선택하세요!');
         switch(num){
-            case 1 : document.write('예금조회');
-            break;
-            case 2 : document.write('예금출금');
-            break;
-            case 3 : document.write('예금입금');
-            break;
-            case 4 : document.write('예금이체');
-            break;
-            default:
-            document.write('잘못 눌렀음');
-        }
- */
+            case '1' : document.write('예금조회');break;
+            case '2' : document.write('예금출금');break;
+            case '3' : document.write('예금입금');break;
+            case '4' : document.write('예금이체');break;
+            default:document.write('잘못 눌렀음');
+        }*/
 
 
-/*         //-----------------------------switch 예제1
+/*         //-----------------------------switch 예제1(if변환 가능)
         let menu = prompt('메뉴 선택 : pizza(p), spagetti(s), risotto(r), drink(d)');
         switch(menu){
             case 'P':
@@ -174,7 +187,7 @@
         } */
 
 
-/*         //-----------------------------switch 예제2
+/*         //-----------------------------switch 예제2(if변환 가능)
         //학점 계산 프로그램 제작, 총점 입력받고 학점은 A-F까지 출력
         //JavaScript 내장객체함수 Math.floor()를 사용하면 뒤를 버림
 
@@ -202,19 +215,27 @@
         } */
 
 
-/*         //-----------------------------switch 예제3
+/*         //-----------------------------switch 예제3(if변환 가능)
         //사칙연산 계산기 프로그램 제작
         //두개의 정수를 입력받고, 연산자 (+,-,*,/)중 하나를 입력하여 결과를 출력
-        //NUM1~NUM4입력받기
 
-        let num1 = parseInt(prompt('첫번째 숫자 입력'));
-        let num2 = parseInt(prompt('두번째 숫자 입력'));
+        let num1 =parseInt(prompt('첫번째 수'));
+        let num2 =parseInt(prompt('두번째 수'));
+        let cal = prompt('연산자를 입력하세요','연산자 (+,-,*,/)중 하나')
         let result = 0;
 
-        switch() */
+        switch(cal){
+            case '+' : result = num1 + num2 ; break;
+            case '-' : result = num1 - num2 ; break;
+            case '*' : result = num1 * num2 ; break;
+            case '/' : result = num1 / num2 ; break;
+            default : alert('연산자가 잘못 입력되었습니다.')
+        } 
+
+        alert(num1 + cal + num2 +'=' + result); */
 
 
-/*         //-----------------------------switch 예제4
+/*         //-----------------------------switch 예제4(if변환 가능)
         //포털사이트로 이동하는 프로그램 만들기
         //위치이동 객체 : location.href="http://"
 
@@ -222,43 +243,46 @@
         let url;
 
         switch(site){
-            case 'naver' : url='www.naver.com'; break;
-            case 'daum' : url='www.daum.net'; break;
-            case 'google' : url='www.google.com'; break;
-            case 'nate' : url='www.nate.com'; break;
+            case 'naver' : url="http://www.naver.com" ; break;
+            case 'duam' : url="http://www.daum.net" ; break;
+            case 'nate' : url="http://www.nate.com" ; break;
+            case 'google' : url="http://www.google.com" ; break;
             default: alert('잘못입력');
         }
 
         //url이 존재한다면
         if(url){
-            location.href="http://" + url
+            location.href=url
         } */
 
 
-        //-----------------------------switch 예제5
+/*         //-----------------------------switch 예제5(if변환 가능)
         //지역명 입력하면 지역번호 알려주는 프로그램
         //서울02 경기031 부산051 대구053 인천032 강원003
         //광주062 대전042 울산052 전북063 전남061 제주064
-        //그 외는 '아직 등록되어 있지 않습니다.'
+        //그 외는 '아직 등록되어 있지 않습니다.' 
         
-        
-        //추가 과제 switch case 전부다 if 문으로 바꿔서 사용해보기
+        let area = prompt('지역명을 입력하세요','서울');
+        let areaNum = '';
 
-/*         let choose = prompt('숫자를 입력하세요');
-        let result = 0;
 
-        switch(choose){
-            case '1' : result='축구';break;
-            case '2' : result='야구';break;
-            case '3' : result='배구';break;
-            default: result='없는값이네요';
+        switch(area){
+            case '서울' : areaNum='02' ; break;
+            case '경기' : areaNum='031' ; break;
+            case '부산' : areaNum='051' ; break;
+            case '대구' : areaNum='053' ; break;
+            case '인천' : areaNum='032' ; break;
+            case '강원' : areaNum='003' ; break;
+            case '광주' : areaNum='062' ; break;
+            case '대전' : areaNum='042' ; break;
+            case '울산' : areaNum='052' ; break;
+            case '전북' : areaNum='063' ; break;
+            case '전남' : areaNum='061' ; break;
+            case '제주' : areaNum='064' ; break;
+            default : areaNum='아직 등록되어 있지 않습니다.';
         }
 
-        document.write(result); */
-
-        let 
-
-
+        alert(area + '의 지역 번호는 ' + areaNum); */
 
 
     </script>
