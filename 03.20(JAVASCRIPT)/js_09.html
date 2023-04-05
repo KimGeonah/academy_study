@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script_function</title>
+
+
+    <script>
+
+/*         //-------------------------------------배열 생성방법 (1)
+        let arr = new Array();
+
+        arr[0] = 'Front_End'
+        arr[1] = 'JavaScript'
+        arr[2] = '20221230'
+        arr[3] = '960시간'
+
+        for(let i=0; i<4; i++){
+            document.write(arr[i],'<br/>')
+        } */
+
+        
+/*         //-------------------------------------배열 생성방법 (2)
+        let arr = new Array('Front_End','JavaScript','20221230')
+
+        for(let i=0; i<arr.length; i++){
+            document.write(arr[i],'<br/>')
+        } */
+
+
+/*         //-------------------------------------배열 생성방법 (3)
+
+
+        let arr = ['Front_End','JavaScript','HTML5&CSS3']
+        //가장 많이 쓰는 방법, 대괄호는 배열이라고 선언된것
+
+        //for(let i in arr){//여기 i 는 첨자 (인덱스)이다
+        //    document.write(arr[i],'<br/>')
+        //}
+
+        for(let item of arr){//여기서 i 는 아이템, 말그대로 값
+            document.write(item,'<br/>')
+        } */
+
+
+/*         //-------------------------------------배열함수(메서드)
+
+        let arr = [2,6,3,9,1,8]
+
+        //예제(1)출력하면 순서대로 나온다.
+        //for(let item of arr){
+        //    document.write(item,'<br/>')
+        //}
+
+
+        //예제(2) join : 출력하면 배열사이에 -가 출력된다
+        //let result = arr.join('-')
+        //document.write(result)
+
+
+        //예제(3) sort : 단독으로 사용하는 함수가 아니다
+        //arr.sort().reverse()
+        //for(let item of arr){
+        //    document.write(item,'<br/>')
+        //}
+
+        //예제(4) slice(a,b) : a부터 시작해서 b이전까지 추출(substr랑 다름) ->3,9가 출력
+        //let arr1 = arr.slice(2,4)
+        //for(let item of arr1){
+        //    document.write(item,'<br/>')
+        //}
+
+        //예제(5) splice(a,b,c) : a번째에서 b갯수만큼 지우고, c를 추가(삽입 삭제가 동시에 일어남)
+        //arr.splice(2,1,10)
+        //for(let item of arr){
+        //    document.write(item,'<br/>')
+        //}
+
+        //예제(6) concat : 배열을 합침
+        //let arr1 = [12,18,11]
+        //let arr2= arr.concat(arr1)
+        //for(let item of arr2){
+        //    document.write(item,'<br/>')
+        //}
+
+        
+        //★중요★ 예제(7) 
+        //push(new data) : 마지막 데이터 추가
+        //pop : 마지막 데이터 삭제
+        
+        //unshift(new data):첫번째 데이터 추가
+        //shift : 첫번째 데이터 삭제 
+
+        //arr.shift(15)
+        //for(let item of arr){
+        //    document.write(item,'<br/>')
+        //} */
+
+
+/*         //-------------------------------------function 함수
+
+            let i = 0
+
+            myFunc()            //함수는 정의만 된 상태라서, 불러와야한다.위치 상관 없음
+
+            function myFunc(){
+                i++
+                document.write('Hello' + i,'<br/>')
+            } */
+
+
+/*         //-------------------------------------function 익명 함수
+
+            
+            let i = 0
+
+
+            function myFunc(){
+                let i =0
+                i++
+                document.write('Hello' + i,'<br/>')
+            } 
+
+            let theFunc = function(){
+                i++
+                document.write('JavaScript' + i,'<br/>')
+            }
+
+            myFunc()
+            theFunc()//let변수여도 함수랑 똑같이 불러줘야한다
+            theFunc()
+            myFunc()//지역함수 적용으로 숫자가 커지지않는다 */
+            
+
+/*         //-------------------------------------function 예제(1)
+
+        function add(a,b){
+            let result = a + b
+            document.write('add = ',result,'<br/>')
+        }
+
+        function subject(x,y){
+            let result = x - y
+            document.write('subject = ',result,'<br/>')
+        }
+        
+        let num1 = parseInt(prompt('첫번째 수'))
+        let num2 = parseInt(prompt('두번째 수'))
+
+        add(num1,num2)
+        subject(num1,num2) */
+
+
+/*         //-------------------------------------function 예제(2)
+
+        function add(a,b){
+            let result = a + b
+            return result
+        }
+
+        let num1 = 10
+        let num2 = 5
+
+        let resultAdd = add(num1,num2)
+        document.write('add = ',resultAdd) */
+
+
+
+        //-------------------------------------function과제(1)
+        //이탈리안 메뉴주문함수를 작성하고 3명의 음식을 주문하는 프로그램
+
+
+        //-------------------------------------function과제(2)
+        //두개의 정수 입력받아 큰수 출력하는 함수프로그램
+        //max 함수 정의하고, 두개 정수를 
+        //prompt를 무한으로 돌리기 for 안에 frompt + ifbreak로 빠져나오기 + max 함수
+
+
+        //-------------------------------------function과제(3)
+        //제품명, 가격, 수량을 입력받고 총 구입가격을 제품명과 함께출력
+        //total
+
+
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

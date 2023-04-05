@@ -1,12 +1,14 @@
 *{margin: 0;padding: 0;}
 li{list-style: none;}
 a{text-decoration: none;color: black;}
-/*    point : rgb(237,125,49);  */
-/*    main : rgb(220,218,218);  */
-/*    sub : rgb(249,230,177);  */
+/*    point : rgb(237,125,49);  주황*/
+/*    main : rgb(220,218,218);  연그레이*/
+/*    sub : rgb(249,230,177);  노랑*/
 /* font-family: 'Black Han Sans'; */
-/* font-family: 'NotoSansKR'; */
-
+/* font-family: 'Gowun Batang'; */
+/* font-family: 'Gowun Dodum'; */
+/* font-family: 'NotoSerifKR'; */
+/* 보더라인: rgba(177, 175, 175, 0.568); */
 
 
 /* *************** header ******************** */
@@ -17,6 +19,7 @@ a{text-decoration: none;color: black;}
     width: 100%;
     height: 50px;
     position: relative;
+    border-bottom: 1px solid rgb(220,218,218);;
 }
 
 #lnb_chk{
@@ -35,55 +38,111 @@ a{text-decoration: none;color: black;}
 .lnb_menu{
     position: fixed;
     /* 화면에 꽉 채우기 위해 absolute에서 변경 */
-    top: 50px;
-    background-color: rgb(249,230,177,50%);
-    width: 50%;
+    top: 51px;
+    background-color: rgba(249, 230, 177);
+    width: 100%;
     height: 100%;
-    padding-left: 2%;
+    z-index: 9999;  
 }
 
 .lnb_menu li{
-    font-family: 'NotoSansKR';
+    font-family: 'Gowun Dodum';
     font-weight: bold;
-    height: 50px;
-    line-height: 50px;
+    height: 70px;
+    line-height: 70px;
+    padding-left: 5%;
+}
+
+.lnb_menu li:last-child{
+    border-bottom: 1px solid rgb(220,218,218);;
 }
 
 .label{
     float: left;
-    width: 15%;
+    width: 10%;
     height: 50px;
-    line-height: 50px;
+    line-height: 60px;
+    text-align: center;
 }
 
 .logo{
     float: left;
-    width: 60%;
-    text-align: center;
+    width: 70%;
     height: 50px;
-    line-height: 50px;
+    text-align: center;
 }
 
 .logo img{
-    width: 50%;height: 100%;
+    height: 100%;
 }
 
 .side_menu{
-    float: right;
+    width: 110px;
     position: absolute;
-    width: 25%;
     right: 0;
-    font-family: 'Black Han Sans';
 }
 
 .side_menu li{
     float: left;
-    font-size: 18px;
     height: 50px;
     line-height: 50px;
+    font-size: 25px;
 }
+
 
 .side_menu li:nth-child(1){
-    margin-right: 5%;
+    margin-right: 40px;
 }
 
+
+
+
+
+/* *************** visual_main ******************** */
+
+.visual_main{
+    position: relative;
+    margin-top: 20px;
+}
+
+.visual_main .slick-list{
+    width: 100%;
+}
+
+.visual_main img{
+    width: 100%;
+}
+
+
+
+/*  .visual_main .slick-arrow{
+    border: none;
+    visibility: hidden;
+}  
+ */
+
+
+
+.visual_main .slick-prev::before{
+    content: "\f053";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    z-index: 1;
+    font-size: 30px;
+    color: rgba(10, 10, 10, 80%);
+}
+
+.visual_main .slick-next::before{
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    z-index: 1;
+    font-size: 30px;
+    color: rgba(10, 10, 10, 80%);
+}

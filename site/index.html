@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>마케팅은 체험뷰</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
     <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-
 
     <header class="header">
 
         <input type="checkbox" id="lnb_chk">
         <div class="label">
-            <label for="lnb_chk" class="open_chk"><i class="fas fa-times fa-2x" style="color:rgb(237,125,49);"></i></label>
-            <label for="lnb_chk" class="close_chk"><i class="fas fa-bars fa-2x" style="color:rgb(237,125,49);"></i></label>
+            <label for="lnb_chk" class="open_chk"><i class="fas fa-times fa-2x"
+                    style="color:rgb(237,125,49);"></i></label>
+            <label for="lnb_chk" class="close_chk"><i class="fas fa-bars fa-2x"
+                    style="color:rgb(237,125,49);"></i></label>
         </div>
 
         <nav class="lnb_menu">
             <ul>
-                <li><a href="#">MENU</a></li>
                 <li><a href="#">HOT</a></li>
                 <li><a href="#">배송형</a></li>
                 <li><a href="#">방문형</a></li>
@@ -41,20 +43,36 @@
 
         <nav class="side_menu">
             <ul>
-                <li><a href="#">검색</a></li>
-                <li><a href="#">로그인</a></li>
+                <li><a href="#"><i class="fas fa-user"></i></a></li>
+                <li><a href="#"><i class="fas fa-search"></i></a></li>
             </ul>
         </nav>
-
-
-
-
 
     </header><!-- header -->
 
 
 
+    <div class="visual_main">
+            <div><img src="./img/main_mobile_01.jpg" alt=""></div>
+            <div><img src="./img/main_mobile_02.jpg" alt=""></div>
+            <div><img src="./img/main_mobile_03.jpg" alt=""></div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.visual_main').slick({
+                autoplay: true
+            });
+        });
+    </script>
 
 
 </body>
+
 </html>
