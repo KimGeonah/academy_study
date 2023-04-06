@@ -168,19 +168,106 @@
 
 
 
-        //-------------------------------------function과제(1)
+/*         //-------------------------------------function과제(1)
         //이탈리안 메뉴주문함수를 작성하고 3명의 음식을 주문하는 프로그램
 
+        function order() {
 
-        //-------------------------------------function과제(2)
+        let menu = prompt('메뉴 선택 : pizza(p), spaghtti(s), risotto(r), drink(d)');
+        switch(menu) {
+          case 'P':
+          case 'p': 
+          document.write('Pizza 주문'); break;
+
+          case 'S':
+          case 's':
+          document.write('spaghtti 누문'); break;
+
+          case 'R':
+          case 'r':
+          document.write('Risotto 주문'); break;
+
+          case 'D':
+          case 'd':
+          document.write('Drink 주문'); break;
+
+          default:
+          document.write('메뉴에 없는 음식입니다.')
+        }
+        
+
+        order()
+        order()
+        order() */
+
+
+
+/*         //-------------------------------------function과제(2)
         //두개의 정수 입력받아 큰수 출력하는 함수프로그램
         //max 함수 정의하고, 두개 정수를 
         //prompt를 무한으로 돌리기 for 안에 frompt + ifbreak로 빠져나오기 + max 함수
 
 
-        //-------------------------------------function과제(3)
+
+        function max(x, y) {
+
+        if(x > y) {
+            alert('max =' + x)
+        } else {
+          alert('max =' + y)
+        }
+    }
+    while(1) {
+        let num1 = parseInt(prompt('첫번째 값 입력(종료:0)'))
+        let num2 = parseInt(prompt('두번째 값 입력(종료:0)'))
+        if(num1 === 0 && num2 === 0) break
+        max(num1, num2)
+    } */
+
+
+
+/*         //-------------------------------------function과제(3)
         //제품명, 가격, 수량을 입력받고 총 구입가격을 제품명과 함께출력
-        //total
+
+
+        
+  function total(price, cnt) {
+
+    let result = price * cnt
+
+    return result
+
+  }
+
+​
+
+​
+
+  let productName = prompt('제품명 입력')
+
+  let productPrice = parseInt(prompt('제품 가격 입력'))
+
+  let productCnt = parseInt(prompt('구입 수량 입력'))
+
+​
+
+  let productTotal = total(productPrice, productCnt)
+
+  
+
+  document.write('제품명 : ', productName, '<br />')
+
+  document.write('제품가격 : ', productPrice, '<br />')
+
+  document.write('제품수량 : ', productCnt, '<br />')
+
+  document.write('총 구입가격 : ', productTotal, '<br />')
+ */
+
+
+
+
+
 
 
     </script>
