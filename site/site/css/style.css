@@ -92,7 +92,13 @@ a{text-decoration: none;color: black;}
 
 .side_menu li:nth-child(1){
     margin-right: 40px;
+    animation: motion 0.25s linear 0s infinite alternate;
 }
+
+@keyframes motion {
+	0% {margin-top: 0px;} 
+	100% {margin-top: 5px;}
+  }
 
 
 
@@ -102,18 +108,13 @@ a{text-decoration: none;color: black;}
 
 .visual_main{
     position: relative;
-    height: 2vh;
+    height: auto;
 }
 
-.visual_main .slick-list{
-    width: 100%;
-}
 
 .visual_main img{
     width: 100%;
 }
-
-
 
   .visual_main .slick-arrow{
     border: none;
@@ -128,7 +129,7 @@ a{text-decoration: none;color: black;}
     font-weight: bold;
     visibility: visible;
     position: absolute;
-    top: 100px;
+    top: 41%;
     left: 10px;
     z-index: 1;
     font-size: 30px;
@@ -140,8 +141,22 @@ a{text-decoration: none;color: black;}
     font-weight: bold;
     visibility: visible;
     position: absolute;
-    top: 100px;
+    top: 41%;
     right: 10px;
     z-index: 1;
     font-size: 30px;
+}
+
+/* *************** content ******************** */
+
+
+.content h2{
+    border-left: 10px solid rgb(237,125,49);
+    margin-bottom: 10px;
+}
+
+.content li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
 }
