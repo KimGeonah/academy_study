@@ -15,31 +15,41 @@
     태그라고 부르지않고 엘리먼트(요소)라고 부른다 -->
 
 
-
     <script>
-        $(function(){
-            $("#second + li").next().css("color","red")
-        })
+
+    $(function(){
+
+
+        $("#menu").closest("div").css("color","red")
+
+});
+
+
     </script>
+
 
 
 </head>
 <body>
 
 
-    <h1>인접 관계 선택자</h1>
-    
-    <ul>
+    <body>
+
+        <h1>탐색 선택자</h1>
+        <div id="wrap">
+        <div id="inner_wrap">
+        <ul id="menu">
         <li>내용1</li>
-        <li id="second">내용2</li>
-        <li>내용3</li>
-        <li>내용3</li>
-        <li>내용3</li>
-        <li>내용3</li>
-        <li>내용3</li>
-
-    </ul>
-
-
+        <li>
+        <span>
+        내용<strong>2</strong>
+        </span>
+        </li>
+        <li><a href="#">내용3</a></li>
+        <li>내용4</li>
+        <li>내용5</li>
+        </ul>
+        </div>
+        </div>
 </body>
 </html>
