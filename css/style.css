@@ -191,6 +191,7 @@ a{text-decoration: none;color: black;}
 
 
 /* *************** banner ******************** */
+
 .banner img{
     width: 100%;
     height: 60px;
@@ -198,7 +199,8 @@ a{text-decoration: none;color: black;}
 }
 
 
-/* *************** item ******************** 
+/* *************** item ********************  */
+
 .item_box{
     margin-top: 30px;
     background-color: rgb(220,218,218);
@@ -228,8 +230,6 @@ a{text-decoration: none;color: black;}
 #tab03:checked ~ .item03{display: block;}
 
 
-
-
 .tab_menu{
     float: left;
     width: 20%;
@@ -245,5 +245,3 @@ a{text-decoration: none;color: black;}
     float: left;
     width: 50%;
 }
-
-*/

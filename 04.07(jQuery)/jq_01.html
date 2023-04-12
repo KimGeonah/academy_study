@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery</title>
     <script src="./js/jquery-3.6.4.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+        <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
 
-            
-<!--     $는 제이쿼리라는뜻
+
+    <!--     $는 제이쿼리라는뜻
     인수들은 따옴표를 붙여줘야한다
     태그라고 부르지않고 엘리먼트(요소)라고 부른다 -->
 
+    <style>
+        .box{
+            width: 300px;height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #000;
+        }
+
+    </style>
 
     <script>
 
-    $(function(){
+        $(function(){
+
+            let state = 0
+
+            $('.btn').click(function(){
+                if (state === 0) {
+                    $(".box").css('background-color','red')
+                    state=1 //상태변수를 알려주기
+                }else{
+                    $(".box").css('background-color','white')
+                    state=0 //상태변수를 알려주기
+                }
+            })
 
 
-        $("#menu").closest("div").css("color","red")
+/*          $(".btn_red").click(function(){
+                $(".box").css("background-color","red")
+            })
 
-});
+            $(".btn_white").click(function(){
+                $(".box").css("background-color","white")
+            }) */
+
+
+            $('.btn').mouseover(function(){
+                $(this).css("background-color","red")
+            })
+
+            $(".btn").mouseout(function(){
+                $(this).css("background-color","white")
+            })
+        })
 
 
     </script>
-
-
-
 </head>
+
 <body>
+    <div class="box">제이쿼리 이벤트 테스트</div>
+
+    <button class="btn">click</button>
 
 
-    <body>
+<!--     <button class="btn_red">red_btn</button>
+    <button class="btn_white">white_btn</button> -->
 
-        <h1>탐색 선택자</h1>
-        <div id="wrap">
-        <div id="inner_wrap">
-        <ul id="menu">
-        <li>내용1</li>
-        <li>
-        <span>
-        내용<strong>2</strong>
-        </span>
-        </li>
-        <li><a href="#">내용3</a></li>
-        <li>내용4</li>
-        <li>내용5</li>
-        </ul>
-        </div>
-        </div>
+
 </body>
+
+
 </html>

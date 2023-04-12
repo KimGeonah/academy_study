@@ -1,0 +1,56 @@
+*{margin: 0;padding: 0;}
+
+
+.tab_menu_outer{
+    background-color: #ccc;
+    height: 300px;
+    position: relative;
+}
+
+
+input{
+    display: none;
+}
+
+
+
+.content01,
+.content02,
+.content03{
+    display: none;
+}
+
+
+#tab_01:checked ~ .content_box .content01{display: block;}
+#tab_02:checked ~ .content_box .content02{display: block;}
+#tab_03:checked ~ .content_box .content03{display: block;}
+
+
+.tab_menu_box .tab_menu{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: pink;
+    margin-bottom: 30px;
+}
+
+
+.tab_menu_box{
+    float: left;
+    width: 35%;
+}
+
+
+.content_box{
+    float: left;
+    width: 65%;
+    background-color: tan;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+
+
+
