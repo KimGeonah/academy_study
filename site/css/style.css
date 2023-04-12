@@ -198,48 +198,6 @@ a{text-decoration: none;color: black;}
 }
 
 
-/* *************** item ******************** */
-/* .item_box{
-    margin-top: 30px;
-    background-color: rgb(220,218,218);
-    height: 400px;
-}
-
-.item img{
-    width: 100px;
-    height: 100px;
-}
-
-.tab{display: none;}
-
-.item{display: none;}
-
-#tab01:checked ~ .item01{display: block;}
-#tab02:checked ~ .item02{display: block;}   
-#tab03:checked ~ .item03{display: block;}
-
-
-
-
-.tab_menu{
-    float: left;
-    width: 20%;
-    margin-right: 30%;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    background-color: rgb(237,125,49);
-}
-
-
-.item{
-    float: left;
-    width: 50%;
-}
- */
-
-
-
 
 /* *************** tab_menu_outer ******************** */
 
